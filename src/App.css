@@ -1,0 +1,24 @@
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+table {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+
+h2, h3 {
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+  
+  th, td {
+    padding: 6px !important;
+  }
+}
