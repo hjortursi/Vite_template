@@ -103,15 +103,17 @@ export const CPIChart = () => {
     { month: '2025M05', value: 651.0 }
   ];
 
-  const formatXAxis = (tickItem: string) => {
+  const formatXAxis = (tickItem: any) => {
     // Convert YYYYMM to YYYY
-    return tickItem.substring(0, 4);
+    const str = String(tickItem);
+    return str.substring(0, 4);
   };
 
-  const formatTooltipLabel = (value: string) => {
+  const formatTooltipLabel = (value: any) => {
     // Convert YYYYMM to Month Year
-    const year = value.substring(0, 4);
-    const month = value.substring(5, 7);
+    const str = String(value);
+    const year = str.substring(0, 4);
+    const month = str.substring(5, 7);
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     return `${months[parseInt(month) - 1]} ${year}`;
   };
